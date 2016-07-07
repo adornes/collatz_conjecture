@@ -7,7 +7,7 @@ def collatz_steps i
 
   def iterate i, l
     if(i == 1) 
-      return l << 1
+      return l << i
     elsif(i % 2 == 0) 
       return iterate(i/2, l << i)
     else 
