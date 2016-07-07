@@ -1,6 +1,7 @@
 #
 # This version in Ruby exploits some nice features of the language and
-# the functional programming paradigm, such as recursivity, range,  ...
+# the functional programming paradigm, such as recursivity, closures
+# and range
 #
 def collatz_steps i
   raise "the number must be greater than zero." unless i > 0
