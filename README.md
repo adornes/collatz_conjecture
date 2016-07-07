@@ -8,7 +8,7 @@ The conjecture can be summarized as follows. Take any positive integer n. If n i
 
 ## Code output
 
-All different implementations here will produce an output as follows, in which each line starts with the number being used as input and the list of steps performed by the algorithm until it reaches the number 1.
+All different implementations here will produce an output as follows, in which each line consists of the number being used as input and the list of steps performed by the algorithm until it reaches the number 1.
 
 Experiment(1, [1])
 
