@@ -19,6 +19,8 @@ def collatz_steps(i: Int): List[Int] = {
 
 def from(n: Int): Stream[Int] = n #:: from(n + 1)
 
+val N = 100
+
 val experiments = from(1).map(i => Experiment(i, collatz_steps(i)))
 
-experiments.take(100).toList.foreach(println)
+experiments.take(N).toList.foreach(println)
