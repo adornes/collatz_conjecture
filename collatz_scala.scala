@@ -1,3 +1,8 @@
+/*
+ * This version in Scala exploits some nice features of the language and
+ * the functional programming paradigm, such as recursivity, Streams and
+ * case classes.
+ */
 object CollatzConjecture extends App {
   case class Experiment(val number: Int, val steps: List[Int])
 
@@ -15,7 +20,7 @@ object CollatzConjecture extends App {
   def from(n: Int): Stream[Int] = n #:: from(n + 1)
   
   override def main( args:Array[String] ):Unit = {
-    val steps_taken = from(1).map(i => Experiment(i, collatz_steps(i)))    
-    steps_taken.take(100).toList.foreach(println)  
+    val experiments = from(1).map(i => Experiment(i, collatz_steps(i)))    
+    experiments.take(100).toList.foreach(println)  
   }
 }
