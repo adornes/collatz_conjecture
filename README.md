@@ -1,5 +1,4 @@
-Playing with the Collatz Conjuncture
-====================================
+# Playing with the Collatz Conjuncture
 
 This project demonstrates some nice features and usage approaches for different programming languages (some that I personally like).
 
@@ -7,7 +6,7 @@ According to [wikipedia](https://en.wikipedia.org/wiki/Collatz_conjecture), the 
 
 The conjecture can be summarized as follows. Take any positive integer n. If n is even, divide it by 2 to get n / 2. If n is odd, multiply it by 3 and add 1 to obtain 3n + 1. Repeat the process (which has been called "Half Or Triple Plus One", or HOTPO) indefinitely. The conjecture is that no matter what number you start with, you will always eventually reach 1.
 
-# Code output
+## Code output
 
 All different implementations here will produce an output as follows, in which each line starts with the number being used as input and the list of steps performed by the algorithm until it reaches the number 1.
 
