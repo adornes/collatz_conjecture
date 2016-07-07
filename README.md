@@ -1,4 +1,4 @@
-# Playing with the Collatz Conjuncture
+# Playing with the Collatz conjecture
 
 This project demonstrates some nice features and usage approaches for different programming languages (some that I personally like).
 
