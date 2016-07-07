@@ -1,25 +1,25 @@
 #
 # This version in Ruby exploits some nice features of the language and
-# the functional programming paradigm, such as recursivity, ...
+# the functional programming paradigm, such as recursivity, range,  ...
 #
-object CollatzConjecture extends App {
-  case class Experiment(val number: Int, val steps: List[Int])
+def collatz_steps i
+  raise "the number must be greater than zero." unless i > 0
 
-  def collatz_steps(i: Int): List[Int] = {
-    require(i > 0, "the number must be greater than zero.")
+  def iterate i, l
+    if(i == 1) 
+      return l << 1
+    elsif(i % 2 == 0) 
+      return iterate(i/2, l << i)
+    else 
+      return iterate(i * 3  + 1, l << i)
+    end
+  end
   
-	  def iterate(i: Int, l: List[Int]): List[Int] =
-	    if(i == 1) i :: l
-	    else if(i % 2 == 0) iterate(i/2, i :: l)
-	    else iterate(i * 3  + 1, i :: l)
-	  
-	  iterate(i, List.empty).reverse
-  }
-  
-  def from(n: Int): Stream[Int] = n #:: from(n + 1)
-  
-  override def main( args:Array[String] ):Unit = {
-    val experiments = from(1).map(i => Experiment(i, collatz_steps(i)))    
-    experiments.take(100).toList.foreach(println)  
-  }
-}
+  iterate(i, [])
+end
+
+N = 100
+
+experiments = (1..N).map{ |i| "Experiment(#{i}, [#{collatz_steps(i).join(",")}])" }
+
+experiments.each{ |e| puts e }   
