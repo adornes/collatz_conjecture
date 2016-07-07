@@ -11,13 +11,23 @@ The conjecture can be summarized as follows. Take any positive integer n. If n i
 All different implementations here will produce an output as follows, in which each line starts with the number being used as input and the list of steps performed by the algorithm until it reaches the number 1.
 
 Experiment(1, [1])
+
 Experiment(2, [2,1])
+
 Experiment(3, [3,10,5,16,8,4,2,1])
+
 Experiment(4, [4,2,1])
+
 Experiment(5, [5,16,8,4,2,1])
+
 Experiment(6, [6,3,10,5,16,8,4,2,1])
+
 Experiment(7, [7,22,11,34,17,52,26,13,40,20,10,5,16,8,4,2,1])
+
 Experiment(8, [8,4,2,1])
+
 Experiment(9, [9,28,14,7,22,11,34,17,52,26,13,40,20,10,5,16,8,4,2,1])
+
 Experiment(10, [10,5,16,8,4,2,1])
+
 ...
